@@ -12,6 +12,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/icons.css">
+
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/laf4nxz.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- LiveReload -->
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
   </head>
   <!-- end head -->
 
@@ -22,145 +33,150 @@
     <nav class="navbar navbar-light mini-raleigh">
       <a class="navbar-nav mr-auto">
         <a class="nav-item">
-          <a class="nav-link top-nav-link" href="#">MINI of Raleigh</a>
+          <a class="nav-link top-nav-link grey-right-border" href="#">MINI of Raleigh</a>
         </a>
         <a class="nav-item top-nav-link">
-          <a class="nav-link top-nav-link" href="#">Help</a>
+          <a class="nav-link top-nav-link grey-right-border icon-help" href="#"/>
         </a>
         <a class="nav-item">
-          <a class="nav-link top-nav-link" href="#">Settings</a>
+          <a class="nav-link top-nav-link icon-settings" href="#"/>
         </a>
       </a>
     </nav>
 
     <!-- main nav -->
-    <nav class="navbar navbar-light main-nav">
-      <a class="navbar-nav align-content-center">
-          <a class="nav-item">
-            <a class="nav-link" href="#">meter</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" href="#">ppl</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" href="#">msg</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" href="#">tag</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" href="#">write</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" href="#">graph</a>
-          </a>
-      </a>
-    </nav>
-
-    <!-- "dashboard" -->
-    <div class="container rounded my-3 align-content-center dashboard">
-      <nav class="navbar navbar-light">
-        <h2 class="navbar-header">Dashboard</h2>
-        <a class="navbar-nav">
-            <form class="form-inline">
-              <input class="form-control" type="text" placeholder="Search">
-              <button class="btn btn-outline-success ml--1" type="submit">Search</button>
-            </form>
+      <div class="container-fluid main-nav">
+        <a class="active main-link m-1 icon-dashboard" href="#">
         </a>
-      </nav>
+        <a class="main-link m-1 icon-customers" href="#"> </a>
+        <a class="main-link m-1 icon-messages" href="#"> </a>
+        <a class="main-link m-1 icon-promotions" href="#"> </a>
+        <a class="main-link m-1 icon-pagecreator" href="#"> </a>
+        <a class="main-link m-1 icon-analytics" href="#"> </a>
+      </div>
+    <!-- "dashboard" -->
+    <div class="triangle"></div>
+    <div class="container rounded my-3 dashboard">
+      <h2 class="col-lg-9">Dashboard</h2>
+      <a class="col-lg-3 navbar-nav">
+        <form class="form-inline">
+          <input class="form-control search-field" type="text" placeholder="">
+          <button class="btn text-blue search-btn" type="submit">
+            <img src="/images/Search.svg" alt="submit"/>
+          </button>
+        </form>
+      </a>
     </div>
 
     <!-- content container -->
-    <div class="container content">
-      <div class="container gray-gradient">
+    <div class="container rounded grey-gradient">
+      <div class="container content">
+        <div class="row">
 
-        <!-- announcements row -->
-        <div class="container">
-          <div class="row">
-            <h6 class="col-lg-2 text-orange">ANNOUNCEMENTS</h6>
-            <p class="col-lg-8">Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus</p>
-            <div class="col-lg-2">
-              <button class="btn btn-outline-success glyphicon glyphicon-chevron-left"/>
-              <button class="btn btn-outline-success glyphicon glyphicon-chevron-right"/>
+          <!-- announcements row -->
+          <div class="row announcements grey-bottom-border">
+            <div class="col-md-3 col-lg-3 announcement-title">
+              <h6 class="text-orange">ANNOUNCEMENTS</h6>
+            </div>
+            <div class="col-md-8 col-lg-8 grey-left-border grey-right-border announcement-text-cell">
+              <p class="text-grey">Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus</p>
+            </div>
+            <div class="col-md-1 col-lg-1 announcement-btn-cell container-fluid">
+              <button class="btn text-orange left icon-chevron-left announcement-btn"/>
+              <button class="btn text-orange right icon-chevron-right announcement-btn">
+              </button>
             </div>
           </div>
-        </div>
 
-        <!-- tasks, analytics, recommendations container -->
-        <div class="container">
+          <!-- main content row -->
           <div class="row">
-            <!-- tasks, recommendations col -->
-            <div class="container col-lg-4">
-              <div class="container">
+            <!-- tasks and recs col -->
+            <div class="col-md-4 col-lg-4 grey-right-border">
+              <div class="row">
                 <div class="row">
-                  <h3 class="text-blue">Tasks</h3>
+                  <h3 class="text-blue content-header">Tasks</h3>
                 </div>
                 <div class="row">
-                  <ul>
-                    <li>Welcome Contacts</li>
-                    <li>Provide Responses</li>
-                    <li>Review Activity</li>
-                    <li>Reach Out</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="row">
-                    <h3 class="text-blue">Recommendations</h3>
-                  </div>
-                  <div class="row">
-                    <ul>
-                      <li>
-                        <h6>Article</h6>
-                        <p>
-                          7 Steps to getting more Fans
-                        </p>
-                      </li>
-                      <li>
-                        <h6>Article</h6>
-                        <p>
-                          Increase traction with more interactions
-                        </p>
-                      </li>
-                      <li>
-                        <h6>Checklist</h6>
-                        <p>
-                          Creating a Promotion
-                        </p>
-                      </li>
-                      <li>
-                        <h6>Tip</h6>
-                        <p>
-                          Share More
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
+                  <dl class="tasks-list">
+                  	<dt class="task-item">
+                      <a class="task-link" href="#">Welcome Contacts</a>
+                    </dt>
+                    <dt class="task-item">
+                      <a class="task-link" href="#">Provide Responses</a>
+                    </dt>
+                    <dt class="task-item">
+                      <a class="task-link" href="#">Review Activity</a>
+                    </dt>
+                    <dt class="task-item">
+                      <a class="task-link" href="#">Reach Out</a>
+                    </dt>
+                  </dl>
                 </div>
               </div>
+              <div class="row">
+                <h3 class="text-blue content-header">Recommendations</h3>
+                <div class="row">
+                  <dl class="rec-list">
+                    <a class="rec-link" href="#">
+                      <dt class="rec-item">Article</dt>
+                      <dd>
+                        7 Steps to getting more fans
+                      </dd>
+                    </a>
+                    <a class="rec-link" href="#">
+                      <dt class="rec-item">Article</dt>
+                      <dd>
+                        Increase traction with more interactions
+                      </dd>
+                    </a>
+                    <a class="rec-link" href="#">
+                      <dt class="rec-item">Checklist</dt>
+                      <dd>
+                        Creating a Promotion
+                      </dd>
+                    </a>
+                    <a class="rec-link" href="#">
+                      <dt class="rec-item">Tip</dt>
+                      <dd>
+                        Share More
+                      </dd>
+                    </a>
+                  </dl>
+                </div>
+              </div>
+              <!-- close tasks and recommendations -->
             </div>
-          <!-- analytics, profile thing col -->
-            <div class="container col-lg-8 ">
-              <div class="row">
-                <h3 class="text-blue">Analytics</h3>
-              </div>
-              <div class="row">
-                <div class="">profile thing
+              <div class="col-md-8 col-lg-8">
+                <div class="row"> <!-- need a row to nest columns -->
+                  <div class="col-md-6 col-lg-6">
+                    <div class="row">
+                      <h3 class="text-blue">Analytics</h3>
+                    </div>
+                    <h3 class="text-blue">Did You Know</h3>
+                  </div>
+                  <div class="col-md-2 col-lg-2">
+                    <div class="row">
+                      <h3 class="text-blue">Channels</h3>
+                      <!-- <img src="/images/Pie-Graph-Channels.svg"/> -->
+                    </div>
+                    <div class="row">
+                      <h3 class="text-blue">Referrals</h3>
+                      <!-- <img src="/images/Pie-Graph-Channels.svg"/> -->
+                    </div>
+                  </div>
 
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-8"> did you know?
-                  <p>
-                      Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.
-                  </p>
+                <div class="row">
+                  <div class="col-md-4 col-lg-4">profile thing
+                  </div>
+                  <div class="col-md-4 col-lg-4">profile thing 2
+                  </div>
                 </div>
               </div>
-            </div>
+            <!-- close analytics, channels, referrals, profile -->
           </div>
-        <!-- three section row -->
-          <div class="container rounded blue-background">
+
+          <div class="blue-background">
             <div class="row">
               <div class="col-lg-4 rounded m-1 row-cell">Watch what you say.
               </div>
@@ -170,9 +186,12 @@
               </div>
             </div>
           </div>
+
         </div>
+    <!-- close out content container w/ gradient -->
       </div>
     </div>
+        <!-- tasks, analytics, recommendations, customers, did you know row -->
 
     <!-- footer -->
     <footer class="footer container-fluid footer-nav">
@@ -181,29 +200,31 @@
           <a class="navbar-nav">
             <div class="container">
               <a class="nav-item">
-                <a class="nav-link" href="#">Tutorials</a>
+                <a class="nav-link footer-link" href="#">Tutorials</a>
               </a>
               <a class="nav-item">
-                <a class="nav-link" href="#">Support</a>
+                <a class="nav-link footer-link grey-left-border grey-right-border" href="#">Support</a>
               </a>
               <a class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </a>
-            <div>
-            </div>
-              <a class="nav-item">
-                <a class="nav-link responsive-text" href="#">Ariel Winter likes your Win a Cooper Sweepstakes Promotion</a>
+                <a class="nav-link footer-link grey-right-border" href="#">Blog</a>
               </a>
             <div>
             </div>
               <a class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
+                <a class="nav-link footer-link" href="#"><a href="#">Ariel Winter</a>likes your<a href="#">Win a Cooper Sweepstakes</a>Promotion</a>
               </a>
             <div>
             </div>
               <a class="nav-item">
-                <a class="nav-link" href="#">fb</a>
-                <a class="nav-link" href="#">tw</a>
+                <a class="nav-link footer-link grey-left-border grey-right-border" href="#">Logout</a>
+              </a>
+            <div>
+            </div>
+              <a class="col-lg-1 nav-item social-media">
+                <button class="btn" type="submit">
+                  <img src="/images/Facebook_active.svg" alt="submit" />
+                </button>
+                <a class="nav-link " href="#">tw</a>
                 <a class="nav-link" href="#">ch</a>
                 <a class="nav-link" href="#">yt</a>
               </a>
