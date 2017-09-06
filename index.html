@@ -92,7 +92,7 @@
           <div class="row">
             <!-- tasks and recs col -->
             <div class="col-md-4 col-lg-4 grey-right-border">
-              <div class="row">
+              <div class="row main-content-cell">
                 <div class="row">
                   <h3 class="text-blue content-header">Tasks</h3>
                 </div>
@@ -113,7 +113,7 @@
                   </dl>
                 </div>
               </div>
-              <div class="row">
+              <div class="row main-content-cell">
                 <h3 class="text-blue content-header">Recommendations</h3>
                 <div class="row">
                   <dl class="rec-list">
@@ -146,37 +146,42 @@
               </div>
               <!-- close tasks and recommendations -->
             </div>
-              <div class="col-md-8 col-lg-8">
+              <div class="col-md-8 col-lg-8 main-content-cell">
                 <div class="row"> <!-- need a row to nest columns -->
-                  <div class="col-md-6 col-lg-6">
-                    <div class="row">
-                      <h3 class="text-blue">Analytics</h3>
-                    </div>
-                    <h3 class="text-blue">Did You Know</h3>
+                  <div class="col-md-9 col-lg-9">
+                    <h3 class="text-blue">Analytics</h3>
+                    <!-- <img class="responsive-image" src="/images/Bar-Graph.png"/> -->
                   </div>
-                  <div class="col-md-2 col-lg-2">
-                    <div class="row">
-                      <h3 class="text-blue">Channels</h3>
-                      <!-- <img src="/images/Pie-Graph-Channels.svg"/> -->
+                  <div class="col-md-3 col-lg-3">
+                    <div class="row grey-bottom-border">
+                      <h6 class="text-grey">CHANNELS</h6>
+                      <img src="/images/Pie-Graph-Channels.svg"/>
                     </div>
                     <div class="row">
-                      <h3 class="text-blue">Referrals</h3>
-                      <!-- <img src="/images/Pie-Graph-Channels.svg"/> -->
+                      <h6 class="text-grey">REFERRALS</63>
+                      <img src="/images/Pie-Graph-Channels.svg"/>
                     </div>
-                  </div>
-
-                </div>
-                <div class="row">
-                  <div class="col-md-4 col-lg-4">profile thing
-                  </div>
-                  <div class="col-md-4 col-lg-4">profile thing 2
                   </div>
                 </div>
+                <div class="row main-content-cell">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-6">profile thing
+                    </div>
+                    <div class="col-md-6 col-lg-6">profile thing
+                    </div>
+                  </div>
+                </div>
+                <div class="row main-content-cell"> <!-- need a row to nest columns -->
+                  <div class="col-md-8 col-lg-8">
+                    <div class="row">
+                      <h3 class="text-blue">Did You Know</h3>
+                    </div>
+                  </div>
+                </div>
+              <!-- close analytics, channels, referrals, profile -->
               </div>
-            <!-- close analytics, channels, referrals, profile -->
           </div>
-
-          <div class="blue-background">
+          <div class="col-md-12 col-lg-12 blue-background">
             <div class="row">
               <div class="col-lg-4 rounded m-1 row-cell">Watch what you say.
               </div>
@@ -186,13 +191,10 @@
               </div>
             </div>
           </div>
-
         </div>
-    <!-- close out content container w/ gradient -->
+        <!-- close out content container w/ gradient -->
       </div>
     </div>
-        <!-- tasks, analytics, recommendations, customers, did you know row -->
-
     <!-- footer -->
     <footer class="footer container-fluid footer-nav">
       <div class="container align-content-center">
@@ -221,12 +223,19 @@
             <div>
             </div>
               <a class="col-lg-1 nav-item social-media">
-                <button class="btn" type="submit">
-                  <img src="/images/Facebook_active.svg" alt="submit" />
+                <button class="btn social-media-btn" type="submit">
+                  <img class="social-media-img" src="/images/Facebook_Hover.png" alt="submit" />
                 </button>
-                <a class="nav-link " href="#">tw</a>
-                <a class="nav-link" href="#">ch</a>
-                <a class="nav-link" href="#">yt</a>
+                <button class="btn twitter" type="submit"> </button>
+                <!-- <button class="btn social-media-btn" type="submit">
+                  <img src="/images/Twitter_Hover.png" alt="submit" />
+                </button>
+                <button class="btn social-media-btn" type="submit">
+                  <img src="/images/Foursquare_Hover.png" alt="submit" />
+                </button>
+                <button class="btn social-media-btn" type="submit">
+                  <img src="/images/Youtube_Hover.png" alt="submit" />
+                </button> -->
               </a>
             </div>
           </a>

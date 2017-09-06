@@ -49,10 +49,17 @@
 
 .row {
   margin:0;
+  height: inherit;
+  width: inherit;
 }
 
 a {
   color: #2498f4 !important;
+}
+
+.responsive-image {
+  width: inherit;
+  height: auto;
 }
 
 /****FONT AND TEXT COLORS****/
@@ -143,9 +150,10 @@ footer, .mini-raleigh {
 .triangle {
   width: 0;
   height: 0;
+  margin-top: -9.5px;
   border-style: solid;
   border-width: 0 17px 9.5px 17px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #ffffff transparent;
   background-color: transparent;
 }
 
@@ -238,6 +246,11 @@ footer, .mini-raleigh {
   max-height: 50px;
 }
 
+.main-content-cell {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
 
 /****TASKS & RECOMMENDATIONS****/
 .tasks-list {
@@ -282,31 +295,41 @@ footer, .mini-raleigh {
   color: #2498f4 !important;
 }
 
-.facebook {
-  width: 100px;
-  height: 100px;
+.social-media-btn {
+  width: 1px !important;
+  height: 1px !important;
   background-color: transparent;
-  /*-webkit-filter: grayscale(100%);
-  filter: grayscale(100%);*/
+  display: inline-block;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
-.facebook:hover {
+.social-media-img {
+  width: 1px !important;
+  height: 1px !important;
+}
+
+.social-media-btn:hover {
   -webkit-filter: none;
   filter: none;
 }
 
 .social-media {
+  display: inline;
 }
 
-/*.twitter {
-
+.twitter {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background: url("../images/Facebook.png") 2px cover no-repeat;
 }
 
 .twitter:hover {
-    background: url("images/card-front.jpg") no-repeat;
+  background: url("../images/Facebook_Hover.png") no-repeat;
 }
 
-.foursquare {
+/*.foursquare {
 
 }
 
