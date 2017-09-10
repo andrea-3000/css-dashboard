@@ -1,65 +1,61 @@
-/****CONTAINER BREAKPOINTS****/
-/*creates large margins for the content*/
-@media (min-width: 576px) {
-  .container {
-    width: 560px;
+/*
+  AUTHOR: ANNIE GONZALES
+  NOTES:
+  - Shouts out to W3Schools, getbootstrap.com, css-tricks.com and Peter Andringa for all of the help on this one
+*/
+@media (max-width: 576px) {
+  #main-list {
+    font-size: 35px;
   }
-  .content {
-    width: 520px;
+
+  #triangle {
+    margin-left: 6px !important;
+    margin-top: 30px !important;
+  }
+
+  #search-field {
+    display: none !important;
+  }
+
+  .left-fade {
+    width: 20px;
+  }
+
+  .right-fade {
+    width: 20px;
   }
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-  .content {
-    width: 710px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-  .content {
-    width: 930px;
-  }
-  .row {
-    width: 930px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1100px
-  }
-  .content {
-    width: 1064px;
-  }
-  .row {
-    width: 1064px;
-  }
-}
-
+/****OVERWRITING BOOTSTRAP AND WEB DEFAULTS****/
 .container {
-  display: flex;
+  max-width: 970px;
   padding: 0;
 }
 
 .row {
   margin:0;
+  padding: 0;
   height: inherit;
-  width: inherit;
+  max-width: 970px;
+}
+
+/* thanks to peter andringa for helping me fix this kink in my positioning!*/
+.row > [class^="col-"], .row > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 a {
-  color: #2498f4 !important;
+  color: #2498f4;
 }
 
-.responsive-image {
-  width: inherit;
-  height: auto;
+a:hover {
+  text-decoration: none;
+}
+
+p, h6 {
+  margin: 0;
+  padding: 0;
 }
 
 /****FONT AND TEXT COLORS****/
@@ -67,90 +63,103 @@ a {
   font-family: myriad-pro, sans-serif;
 }
 
-footer, .mini-raleigh {
+footer, #mini-raleigh {
   font-family: proxima-nova, sans-serif;
 }
 
-.text-orange {
-  color: #fe7f13;
+.text-white { color: #ffffff !important; }
+.text-orange { color: #fe7f13 !important; }
+.text-blue { color: #2498f4 !important; }
+.text-grey { color: #777777 !important; }
+.text-green { color: #32cc66 !important; }
+
+.white-background { background-color: #ffffff; }
+.blue-background { background-color: #2498f4; }
+
+#grey-gradient {
+  background: linear-gradient(to bottom, #f6f6f6 0%, #ffffff 250px, #ffffff 100%);
+  padding: 14px;
 }
 
-.text-blue {
-  color: #2498f4;
-}
-
-.text-grey {
-  color: #777777;
-}
-
-.blue-background {
-  background-color: #2498f4;
-}
-
-.grey-gradient {
-  background: linear-gradient(#f6f6f6,#ffffff);
-  padding: 20px;
+.border-shadow {
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .03);
 }
 
 /****BORDERS****/
-.grey-border {
-  border: .5px solid #000000;
-}
-
-.grey-right-border{
-  border-right: .5px solid #000000;
-}
-
-.grey-left-border{
-  border-left: .5px solid #000000;
-}
-
-.grey-bottom-border {
-  border-bottom: .5px solid #000000;
-}
-
-.grey-dashed-border {
-  border-bottom: .5px dashed #000000;
-}
+.grey-border { border: .5px solid #e9e9e9;}
+.grey-right-border{ border-right: .5px solid #e9e9e9; }
+.grey-left-border{ border-left: .5px solid #e9e9e9; }
+.grey-bottom-border { border-bottom: .5px solid #e9e9e9; }
 
 /****TOP NAV****/
-.mini-raleigh {
+#mini-raleigh {
   background: linear-gradient(#2498f4,#1d85d8);
   font-size: 14px;
   font-weight: bold;
-  padding: 8px;
 }
 
 .top-nav-link {
-  color: white !important;
+  color: white;
 }
 
 .top-nav-link:hover {
-  color: grey !important;
+  color: grey;
 }
 
 /****MAIN NAV****/
-.main-nav {
-  background: url(/images/menu-stripes.png) repeat, url(/images/Bitmap.png) no-repeat center, url(/images/Fade-Left.png) no-repeat left, url(/images/Fade-Right.png) no-repeat right, #134670;
-  background-size: 69%, auto, auto, auto;
+#main-nav {
+  background: url(../images/menu-stripes.png) repeat, url(../images/Bitmap.png) no-repeat center, #134670;
   height: 109px;
-  font-size: 300%;
+  padding: 0;
+  font-size: 50px;
   text-align: center;
+  justify-content: space-between;
 }
 
-.main-link:hover, .active {
-  color: #33CC66 !important;
-  text-decoration: none;
+.left-fade {
+  position: absolute;
+  left: 0;
+}
+
+.right-fade {
+  position: absolute;
+  right: 0;
+}
+
+#main-list {
+  height: 100%;
+  list-style-type: none;
+  display: inline-block;
+  padding: 18px;
+}
+
+#main-nav ul li {
+  display: inline;
 }
 
 .main-link {
-  margin: auto;
+  color: #2498f4;
 }
 
-.triangle {
+/*.main-link:before {
+  /*background: -webkit-linear-gradient(-90deg, #229eff, #1e87da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/
+
+.main-link:hover, .active {
+  color: #33CC66;
+  text-decoration: none;
+  display: inline;
+}
+
+#triangle {
+  position: absolute;
+  /*bottom: 0;*/
   width: 0;
   height: 0;
-  margin-top: -9.5px;
+  margin-left: 16px;
+  margin-top: 8px;
   border-style: solid;
   border-width: 0 17px 9.5px 17px;
   border-color: transparent transparent #ffffff transparent;
@@ -158,7 +167,7 @@ footer, .mini-raleigh {
 }
 
 /****DASHBOARD****/
-.dashboard {
+#dashboard {
   background: #33cc66;
   color: white;
   font-size: 36px;
@@ -169,121 +178,510 @@ footer, .mini-raleigh {
   padding-bottom: 21px;
 }
 
-.search-field {
-  height: 2.5em;
-  width: 320px !important;
-  right: 15px;
+.sub-header {
+  display: inline;
+  margin-left: 48px;
 }
 
-.search-btn {
-  margin-bottom:5vw;
-  position:absolute;
-  right:10px;
+.sub-header p {
+  display: inline;
+  font-size: 13px;
+}
+
+.search-group {
+  position: absolute;
+  right: 0;
+}
+
+#search-field {
+  float: right;
+  height: 2.5em;
+  width: 257px;
+  padding-right: 10px;
+}
+
+#search-btn {
+  height: 23px;
+  width: 22px;
+  padding: 0px;
+  position: relative;
+  right:30px;
   background-color:transparent;
 }
 
-.search-btn:hover {
+#search-btn:hover {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
 /****CONTENT****/
-.content {
+#content {
   background: white;
   border: .5px solid #e9e9e9;
+  padding: 0px;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .content-header {
+  padding: 20px 0px 0px 20px;
   font-size: 32px;
 }
 
+.indent {
+  padding-left: 20px;
+}
+
 /****ANNOUNCEMENTS****/
-.announcement-title {
+#announcement-title,  #announcement-btn-cell {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+#announcement-text-cell {
+  padding-left: 14px;
+  padding-top: 13px;
+  text-align: left;
+}
+
+#announcements {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 14px;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
-.announcements {
-  margin-left: 0px;
-  max-height: 50px;
-}
-
-.announcement-text-cell {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.announcement-btn-cell {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-.announcement-btn {
+#announcement-btn {
   background-color: white;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   font-size: 9px;
   padding: 0px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 15px;
-  border: 1px solid #7f7f7f;
+  border: 1px solid #cacaca;
+  box-shadow: 0 0 3px #7f7f7f;
 }
 
-.announcement-btn:hover {
+#announcement-btn:hover {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
 /**** MAIN CONTENT ****/
 .main-content {
-  margin-left: 0px;
-  max-height: 50px;
+  margin-top: 5px;
 }
-
-.main-content-cell {
-  padding-top: 20px;
-  padding-left: 20px;
-}
-
 
 /****TASKS & RECOMMENDATIONS****/
-.tasks-list {
+.task-settings {
+  color: #7f7f7f;
+  display: inline;
+  float: right;
+  margin-right: 17px;
+  background: transparent;
+}
+
+.task-settings:hover {
+  color: #e9e9e9;
+}
+
+.task-indent {
+  margin-left: 12px;
+}
+
+.task-list {
+  width: 100%;
+  list-style: none;
 	counter-reset: task-counter;
   font: bold 21px;
-  border-radius: 15px;
+  padding: 0px 0px 0px 0px;
+  margin-bottom: 0;
 }
-.tasks-list dt {
-  font: bold 18px;
-  color: #2498f4;
+
+/*number styling from https://css-tricks.com/numbering-in-style/ and implementation help from peter andringa*/
+.task-list li {
+  padding: 20px 0px 20px 0px;
 }
-.task-item {
-  color: #2498f4;
-}
-.tasks-list dt::before {
+
+.task-list li:before {
 	content: counter(task-counter);
 	counter-increment: task-counter;
+  margin-left: 12px;
+  padding: 4px 10px 4px 10px;
+  background: #32cc66;
+  font: bold 18px;
+  color: white;
+  border-radius: 15px;
 }
-.task-link:hover, .task-item:hover {
-  text-decoration: none !important;
-  color: #7f7f7f !important;
+
+.task-list li:hover {
+  color: #7f7f7f;
+}
+
+.task-list li:hover:before {
+  border-color: #7f7f7f;
+  background: #7f7f7f;
+}
+
+.task-list li:hover button {
+  border-color: #7f7f7f;
+  color: #7f7f7f;
+}
+
+.task-list li:hover a {
+  color: #7f7f7f;
+}
+
+.task-list button {
+  float: right;
+  text-align: center;
+  min-width: 58px;
+  height: 29px;
+  padding: 0px;
+  margin-right:  10px;
+  border: 1px solid #2498f4;
+  color: #2498f4;
+  background-color: transparent;
+}
+
+.rec-header {
+  width: 100%;
+}
+
+.rec-content {
+  width: 100%;
+  margin: 0px 8px 0px 8px;
+}
+
+.rec-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.rec-list li {
+  font-size: 16px;
+  line-height: 1em;
+  padding: 10px 10px 10px 0px;
+  border-bottom: .5px dotted #e9e9e9;
+}
+
+.rec-list li span {
+  color: #33cc66;
+  font-size: 30px;
+  margin-right: 2px;
+  float: left;
+}
+
+.rec-list li:hover span {
+  color: #2498f4;
+}
+
+.rec-list li h6 {
+  font-size: 10px;
+  color: #7f7f7f;
+}
+
+.rec-list li:hover p {
+  color: #2498f4;
+}
+
+.rec-list li a {
+  color: #7f7f7f;
+}
+
+.rec-list li:hover {
+  color: #2498f4;
+}
+
+/****ANALYTICS****/
+.dates {
+  max-height: 27px;
+  padding-top: 3px;
+  font-size: 13px;
+  border: 1px solid #dddddd;
+  color: #7f7f7f;
+  background-color: transparent;
+}
+
+.sub-header {
+  display: inline;
+  margin-left: 48px;
+}
+
+.sub-header p {
+  display: inline;
+  font-size: 13px;
+}
+
+.btn-group {
+  white-space: nowrap;
+  position: relative;
+  float: right;
+  margin-right: 10px;
+}
+
+.dropdown-menu {
+  color: #7f7f7f;
+  font-size: 13px;
+  background-color: #eee;
+}
+
+.bar-graph {
+  width: 100%;
+  padding-top: 27px;
+  padding-right: 26px;
+}
+
+.pc-line {
+    margin-top: 72px;
+    box-shadow: 3px 0px 0px 0px rgba(0, 0, 0, .1) inset;
+}
+
+.pie-charts {
+  font-size: 13px;
+}
+
+.pie-charts div {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.pie-charts p {
+  width: 80px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/****CHECKBOXES****/
+#checkbox-row {
+  padding: 0;
+}
+
+.checkboxes { /*https://stackoverflow.com/questions/953918/how-to-align-a-div-to-the-middle-horizontally-width-of-the-page*/
+  margin: 0 auto;
+  padding: 36px 0;
+}
+
+.checkboxes span {
+  font-size: 11px;
+  position: relative;
+  padding: 3px 7px 3px 7px;
+  margin: 0px 3px -4px -6px;
+  vertical-align: middle;
+  z-index: 0;
+}
+
+.checkboxes label {
+  position: relative;
+  margin: 0;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+
+/*Styling checkboxes came from https://stackoverflow.com/questions/3772273/pure-css-checkbox-image-replacement*/
+.checkboxes input {
+  width: 100%;
+  display: inline;
+  display: none;
+}
+
+.checkboxes input + label{
+  background: url(../images/Unchecked-Box.png);
+  height: 22px;
+  width: 25px;
+  padding: 0 0 0 0px;
+  vertical-align: middle;
+  /*disable text highlight of checkbox image: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting-using-css*/
+  user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  z-index: 0;
+}
+
+.checkboxes input:checked + label {
+  background: url(../images/Checked-Box.png);
+}
+
+/*cell colors for checkbox captions*/
+#fb-text { background-color: #114570; }
+#tw-text { background-color: #2298f4; }
+#fs-text { background-color: #3a599b; }
+#g-text { background-color: #31cc66; }
+
+/****CUSTOMERS ****/
+.cc {
+  font-size: 21px;
+  vertical-align: middle;
+  padding-top: 45px;
+  padding-bottom: 28px;
+}
+
+.cc-wrapper {
+  margin: 0;
+  max-width: 310px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 45px;
+}
+
+.cc a {
+  position: relative;
+  float: left;
+  font-size: 74px;
+  margin-top: -50px;
+  margin-bottom: -35px;
+  margin-left: 50px;
+  z-index: 1;
+}
+
+.cc-cell {
+  text-align: center;
+  max-width: 216px;
+  margin: 0px 14px 0px 14px;
+  box-shadow: -1px 2px 6px 0px rgba(0, 0, 0, .09);
+}
+
+.cc-header {
+  margin: 0px 0px 0px 0px;
+  font-size: 21px;
+}
+
+.cc-text {
+  font-size: 11px;
+  margin: 0px;
+}
+
+#ribbon-left {
+  position: relative;
+  margin: 44px 0px 0px 0px;
+  float: left;
+}
+
+.banner {
+  position: relative;
+  margin-top: 40px;
+}
+
+#ribbon-right {
+  position: relative;
+  margin: 44px 0px 0px 0px;
+  float: right;
+}
+
+#cc-chart {
+  position: relative;
+  padding: 8px 6px 8px 6px;
+  max-width: 190px;
+}
+
+/****DID YOU KNOW****/
+.dyk-wrapper div {
+  font-size: 15px;
+  padding: 35px 51px 35px 51px;
+}
+
+.dyk-wrapper {
+  margin: 20px;
+  position: relative;
+}
+
+.dyk-wrapper h6 {
+  font-size: 13px;
+}
+
+/*THANK YOU CSS TRICKS!!! https://css-tricks.com/centering-css-complete-guide/*/
+.dyk-wrapper .semi-left {
+  background: url(../images/Semicircle-Right.svg) no-repeat;
+  position: absolute;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width:22px;
+  vertical-align: middle;
+}
+
+.dyk-wrapper .semi-right {
+  background: url(../images/Semicircle-Left.svg) no-repeat;
+  right: 0;
+  position: absolute;
+  height: 50px;
+  width: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  width:22px;
+  vertical-align: middle;
+}
+
+.dyk-wrapper .left-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+}
+.dyk-wrapper .left-btn:hover {
+  filter: grayscale();
+}
+
+.dyk-wrapper .right-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+}
+.dyk-wrapper .right-btn:hover {
+  filter: grayscale();
+}
+
+/****BOTTOM THREE CELLS****/
+#bottom-row-background {
+  padding: 20px 29px 20px 29px;
+}
+
+#see-others {
+  margin-top: -12px;
+  margin-left: 2px;
+}
+
+.row-cell {
+  max-width: 270px;
+  max-height: 160px;
+  margin-top: 10px;
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, .3);
+}
+
+.row-cell:hover {
+  cursor: pointer; /* https://www.w3schools.com/cssref/pr_class_cursor.asp */
+  filter: grayscale();
+}
+
+#version-two {
+  position: relative;
+  margin-left: 8px !important;
 }
 
 /****FOOTER NAV****/
 .footer-nav {
-  background: linear-gradient(#dddddd,#ffffff);
+  background: linear-gradient(#f5f5f5,#ffffff);
   font-size: 14px;
   color: #7f7f7f;
   position: absolute;
-  bottom:0;
-  bottom-margin: 0;
+  margin-bottom: 0;
   width: 100%;
   height: 50px;
+}
+
+.footer-nav ul li{
+  display: inline;
 }
 
 .footer-link {
@@ -294,53 +692,3 @@ footer, .mini-raleigh {
 .footer-link:hover {
   color: #2498f4 !important;
 }
-
-.social-media-btn {
-  width: 1px !important;
-  height: 1px !important;
-  background-color: transparent;
-  display: inline-block;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
-.social-media-img {
-  width: 1px !important;
-  height: 1px !important;
-}
-
-.social-media-btn:hover {
-  -webkit-filter: none;
-  filter: none;
-}
-
-.social-media {
-  display: inline;
-}
-
-.twitter {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  background: url("../images/Facebook.png") 2px cover no-repeat;
-}
-
-.twitter:hover {
-  background: url("../images/Facebook_Hover.png") no-repeat;
-}
-
-/*.foursquare {
-
-}
-
-.foursquare:hover {
-    background: url("images/card-front.jpg") no-repeat;
-}
-
-.youtube {
-
-}
-
-.youtube:hover {
-    background: url("images/card-front.jpg") no-repeat;
-}*/
