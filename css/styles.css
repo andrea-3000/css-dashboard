@@ -1,7 +1,6 @@
 /*
   AUTHOR: ANNIE GONZALES
-  NOTES:
-  - Shouts out to W3Schools, getbootstrap.com, css-tricks.com and Peter Andringa for all of the help on this one
+  Shouts out to W3Schools, css-tricks.com stackoverflow.com and Peter Andringa for all of the help on this one :)
 */
 @media (max-width: 576px) {
   #main-list {
@@ -126,6 +125,7 @@ footer, #mini-raleigh {
 }
 
 .top-nav-link {
+  padding: 0 10px;
   color: white;
 }
 
