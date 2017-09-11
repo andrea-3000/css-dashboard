@@ -17,12 +17,38 @@
     display: none !important;
   }
 
+  .grey-left-border {
+    border: none;
+  }
+
   .left-fade {
     width: 20px;
   }
 
   .right-fade {
     width: 20px;
+  }
+
+  .ariel-winter {
+    display: none !important;
+  }
+
+  #search-btn{
+    margin-top: -20px;
+    height: 23px;
+    width: 22px;
+    position: absolute;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:22px;
+    vertical-align: middle;
+  }
+
+  .footer-nav ul li, img {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    margin: 0;
   }
 }
 
@@ -90,6 +116,7 @@ footer, #mini-raleigh {
 .grey-right-border{ border-right: .5px solid #e9e9e9; }
 .grey-left-border{ border-left: .5px solid #e9e9e9; }
 .grey-bottom-border { border-bottom: .5px solid #e9e9e9; }
+.mini-right-border{ border-right: .5px solid #1c85d8; }
 
 /****TOP NAV****/
 #mini-raleigh {
@@ -141,12 +168,6 @@ footer, #mini-raleigh {
   color: #2498f4;
 }
 
-/*.main-link:before {
-  /*background: -webkit-linear-gradient(-90deg, #229eff, #1e87da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}*/
-
 .main-link:hover, .active {
   color: #33CC66;
   text-decoration: none;
@@ -155,7 +176,6 @@ footer, #mini-raleigh {
 
 #triangle {
   position: absolute;
-  /*bottom: 0;*/
   width: 0;
   height: 0;
   margin-left: 16px;
@@ -178,34 +198,28 @@ footer, #mini-raleigh {
   padding-bottom: 21px;
 }
 
-.sub-header {
-  display: inline;
-  margin-left: 48px;
+.dash-title {
+  float: left;
 }
 
-.sub-header p {
-  display: inline;
-  font-size: 13px;
-}
-
-.search-group {
-  position: absolute;
-  right: 0;
+.search-form {
+  position: relative;
 }
 
 #search-field {
-  float: right;
+  position: relative;
   height: 2.5em;
   width: 257px;
-  padding-right: 10px;
+  right: 0;
 }
 
-#search-btn {
+#search-btn{
+  float: right;
   height: 23px;
   width: 22px;
   padding: 0px;
-  position: relative;
-  right:30px;
+  position: absolute;
+  right: 25px;
   background-color:transparent;
 }
 
@@ -678,17 +692,44 @@ footer, #mini-raleigh {
   margin-bottom: 0;
   width: 100%;
   height: 50px;
+  box-shadow: 0px -8px 6px 0px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #ffffff;
+}
+
+.footer-nav ul {
+  padding: 0;
+  margin: 0 auto;
+  height: inherit;
 }
 
 .footer-nav ul li{
+  padding: 0px 10px;
   display: inline;
 }
 
-.footer-link {
-  color: #7f7f7f !important;
-  text-align: center !important;
+.tsb a{
+  padding: 0px 10px;
+  color: #7f7f7f;
 }
 
-.footer-link:hover {
-  color: #2498f4 !important;
+.logout img {
+  padding: 10px;
+}
+
+.up-chevron {
+  font-size: 8px;
+  color: #2498f4;
+  background-color: transparent;
+}
+
+.up-chevron:hover {
+  filter: grayscale();
+}
+
+.social-media-btn img {
+  filter: grayscale();
+  max-width: 16px;
+}
+.social-media-btn:hover img {
+  filter: none;
 }

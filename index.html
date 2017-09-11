@@ -35,10 +35,10 @@
         <nav class="navbar navbar-light">
           <a class="navbar-nav mr-auto">
             <a class="nav-item">
-              <a class="nav-link top-nav-link grey-right-border" href="#">MINI of Raleigh</a>
+              <a class="nav-link top-nav-link mini-right-border" href="#">MINI of Raleigh</a>
             </a>
             <a class="nav-item top-nav-link">
-              <a class="nav-link top-nav-link grey-right-border icon-help" href="#"/>
+              <a class="nav-link top-nav-link mini-right-border icon-help" href="#"/>
             </a>
             <a class="nav-item">
               <a class="nav-link top-nav-link icon-settings" href="#"/>
@@ -52,30 +52,29 @@
     <div class="container-fluid" id="main-nav">
       <img class="left-fade" src="/images/Fade-Left.png"/>
       <img class="right-fade" src="/images/Fade-Right.png"/>
-      <ul id="main-list">
-        <li class="main-link active icon-dashboard" href="#"></li>
-        <li class="main-link mr-2 icon-customers" href="#"></li>
-        <li class="main-link ml-2 icon-messages" href="#"></li>
-        <li class="main-link ml-2 icon-promotions" href="#"></li>
-        <li class="main-link icon-pagecreator" href="#"></li>
-        <li class="main-link icon-analytics" href="#"></li>
-        <div id="triangle"></div>
-      </ul>
+        <ul id="main-list">
+          <li class="main-link active icon-dashboard" href="#"></li>
+          <li class="main-link mr-2 icon-customers" href="#"></li>
+          <li class="main-link ml-2 icon-messages" href="#"></li>
+          <li class="main-link ml-2 icon-promotions" href="#"></li>
+          <li class="main-link icon-pagecreator" href="#"></li>
+          <li class="main-link icon-analytics" href="#"></li>
+          <div id="triangle"></div>
+        </ul>
+
     </div>
 
     <!-- "dashboard" -->
     <div class="container rounded my-3" id="dashboard">
-      <div class="row">
-        <div>
+      <nav class="form-inline">
+        <div class="col-lg-9 dash-title">
           <h2>Dashboard</h2>
         </div>
-        <form class="form-inline">
+        <form class="col-md-3 form-inline search-form">
           <input class="form-control" id="search-field" type="text" placeholder=""></input>
-          <button class="btn text-blue" id="search-btn" type="submit">
-            <img src="images/Search.svg" alt="submit"/>
-          </button>
+          <button class="btn text-blue" id="search-btn" type="submit"><img src="images/Search.svg" alt="submit"/></button>
         </form>
-      </div>
+      </nav>
     </div>
 
     <!-- main content -->
@@ -284,21 +283,28 @@
     </div>
     <!-- footer -->
     <footer class="footer container-fluid footer-nav">
-      <div class="container align-content-center">
-        <nav class="navbar navbar-light">
+        <nav class="container navbar navbar-light">
           <ul>
-            <li>
-              Tutorials
+            <li class="tsb">
+              <a href="#">Tutorials</a>
+              <a class="grey-left-border grey-right-border">Support</a>
+              <a>Blog</a>
             </li>
-            <li>
-              Support
+            <li class="ariel-winter grey-left-border">
+              <span>
+                <a href="#">Ariel Winter</a> likes your <a href="#">Win a Cooper Sweepstakes</a> Promotion
+                <button class="btn up-chevron icon-chevron-up"></button>
+              </span>
             </li>
+            <li class="logout grey-right-border grey-left-border"><img src="images/Account.png"/>Logout</li>
             <li>
-              Blog
+              <a class="social-media-btn"><img src="images/Facebook_Hover.png"/></a>
+              <a class="social-media-btn"><img src="images/Twitter_Hover.png"/></a>
+              <a class="social-media-btn"><img src="images/Foursquare_Hover.png"/></a>
+              <a class="social-media-btn"><img src="images/Youtube_Hover.png"/></a>
             </li>
           </ul>
         </nav>
-      </div>
     </footer>
 
 
