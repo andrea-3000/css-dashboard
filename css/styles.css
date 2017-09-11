@@ -186,6 +186,11 @@ footer, #mini-raleigh {
   background-color: transparent;
 }
 
+/*#shadow {
+  position: relative;
+  bottom: 0;
+}*/
+
 /****DASHBOARD****/
 #dashboard {
   background: #33cc66;
