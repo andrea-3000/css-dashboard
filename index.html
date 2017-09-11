@@ -34,19 +34,14 @@
       <div class="container">
         <nav class="navbar navbar-light">
           <a class="navbar-nav mr-auto">
-            <a class="nav-item">
-              <a class="nav-link top-nav-link mini-right-border" href="#">MINI of Raleigh</a>
-            </a>
-            <a class="nav-item">
-              <a class="nav-link top-nav-link mini-right-border icon-help" href="#"/>
-            </a>
-            <a class="nav-item">
-              <a class="nav-link top-nav-link icon-settings" href="#"/>
-            </a>
+            <a class="nav-item"><a class="nav-link top-nav-link mini-right-border" href="#">MINI of Raleigh</a></a>
+            <a class="nav-item"><a class="nav-link top-nav-link mini-right-border icon-help" href="#"/></a>
+            <a class="nav-item"><a class="nav-link top-nav-link icon-settings" href="#"/></a>
           </a>
         </nav>
       </div>
     </div>
+    <!-- end top nav -->
 
     <!-- main nav -->
     <div class="container-fluid" id="main-nav">
@@ -61,10 +56,10 @@
           <li class="main-link icon-analytics" href="#"></li>
           <div id="triangle"></div>
         </ul>
-
     </div>
+    <!-- end main nav -->
 
-    <!-- "dashboard" -->
+    <!-- dashboard header -->
     <div class="container rounded my-3" id="dashboard">
       <nav class="form-inline">
         <div class="col-lg-9 dash-title">
@@ -76,6 +71,7 @@
         </form>
       </nav>
     </div>
+    <!-- end dashboard header -->
 
     <!-- main content -->
     <div class="container rounded" id="grey-gradient">
@@ -95,11 +91,13 @@
               </button>
             </div>
           </div>
+          <!-- end announcements -->
 
           <!-- main content row -->
           <div class="row main-content">
             <!-- tasks and recs col -->
             <div class="col-md-4 col-lg-4 grey-right-border">
+              <!-- tasks -->
                 <h3 class="text-blue content-header">Tasks
                 <button class="btn task-settings icon-settings"></button>
                 </h3>
@@ -122,6 +120,8 @@
                     </li>
                   </ul>
                 </div>
+                <!-- end tasks -->
+              <!-- recommendations -->
               <div class="row">
                 <div class="row rec-header grey-bottom-border">
                   <h3 class="text-blue content-header">Recommendations</h3>
@@ -151,11 +151,15 @@
                   </ul>
                 </div>
               </div>
-              <!-- close tasks and recommendations -->
+              <!-- end recommendations -->
             </div>
-            <!-- analytics -->
+            <!-- end tasks and recommendations -->
+
+            <!-- analytics, pie charts, etc -->
             <div class="col-md-8 col-lg-8 main-content-cell">
-              <div class="row"> <!-- need a row to nest columns -->
+              <!-- analytics and pie charts -->
+              <div class="row">
+                <!-- analytics -->
                 <div class="col-md-9 col-lg-9">
                   <div class="row">
                     <p class="text-blue content-header">Analytics</p>
@@ -176,8 +180,8 @@
                   </div>
                   <img class="indent bar-graph" src="images/Bar_Graph.png"/>
                 </div>
-
-                <!-- channels and referrals / pie charts -->
+                <!-- end analytics -->
+                <!-- pie charts -->
                 <div class="col-xs-12 col-md-3 col-lg-3">
                   <div class="row pc-line grey-left-border">
                     <div class="pie-charts mr-auto ml-auto">
@@ -192,26 +196,29 @@
                     </div>
                   </div>
                 </div>
+                <!-- end pie charts -->
               </div>
-                <!-- checkboxes -->
-                <div class="col-md-12 col-lg-12 grey-bottom-border border-shadow" id="checkbox-row">
-                  <div class="row">
-                      <form class="checkboxes">
-                        <input type="checkbox" id="facebook">
-                        <label for="facebook"></label>
-                        <span class="rounded text-white" id="fb-text">Facebook</span>
-                        <input type="checkbox" id="twitter">
-                        <label for="twitter"></label>
-                        <span class="rounded text-white" id="tw-text">Twitter</span>
-                        <input type="checkbox" id="foursquare">
-                        <label for="foursquare"></label>
-                        <span class="rounded text-white" id="fs-text">Foursquare</span>
-                        <input type="checkbox" id="google">
-                        <label for="google"></label>
-                        <span class="rounded text-white" id="g-text">Google+</span>
-                      </form>
-                  </div>
+              <!-- end analytics and pie charts -->
+              <!-- checkboxes -->
+              <div class="col-md-12 col-lg-12 grey-bottom-border border-shadow" id="checkbox-row">
+                <div class="row">
+                    <form class="checkboxes">
+                      <input type="checkbox" id="facebook">
+                      <label for="facebook"></label>
+                      <span class="rounded text-white" id="fb-text">Facebook</span>
+                      <input type="checkbox" id="twitter">
+                      <label for="twitter"></label>
+                      <span class="rounded text-white" id="tw-text">Twitter</span>
+                      <input type="checkbox" id="foursquare">
+                      <label for="foursquare"></label>
+                      <span class="rounded text-white" id="fs-text">Foursquare</span>
+                      <input type="checkbox" id="google">
+                      <label for="google"></label>
+                      <span class="rounded text-white" id="g-text">Google+</span>
+                    </form>
                 </div>
+              </div>
+              <!-- end checkboxes -->
                 <!-- contacts and customers -->
                 <div class="row grey-bottom-border border-shadow cc">
                   <div class="col-md-6 col-lg-6">
@@ -241,9 +248,11 @@
                         <img id="cc-chart" src="images/Customer-Chart.png"/>
                       </div>
                     </div>
-                </div>
+                  </div>
               </div>
-              <div class="row"> <!-- need a row to nest columns -->
+              <!-- end contacts and customers -->
+              <!-- did you know -->
+              <div class="row">
                 <div class="col-md-12 col-lg-12">
                   <div class="row">
                     <div class="rounded blue-background text-white dyk-wrapper">
@@ -261,8 +270,9 @@
                   </div>
                 </div>
               </div>
+              <!-- end did you know -->
             </div>
-            <!-- close analytics, channels, referrals, profile -->
+          <!-- close analytics, channels, referrals, profile -->
           </div>
           <div class="col-md-12 col-lg-12 blue-background" id="bottom-row-background">
             <div class="row">
@@ -278,37 +288,35 @@
             </div>
           </div>
         </div>
-        <!-- close out content container w/ gradient -->
       </div>
+      <!-- end container -->
     </div>
-    <!-- footer -->
-    <footer class="footer container-fluid footer-nav">
-        <nav class="container navbar navbar-light">
-          <ul>
-            <li class="tsb">
-              <a href="#">Tutorials</a>
-              <a class="grey-left-border grey-right-border">Support</a>
-              <a>Blog</a>
-            </li>
-            <li class="ariel-winter grey-left-border">
-              <span>
-                <a href="#">Ariel Winter</a> likes your <a href="#">Win a Cooper Sweepstakes</a> Promotion
-                <button class="btn up-chevron icon-chevron-up"></button>
-              </span>
-            </li>
-            <li class="logout grey-right-border grey-left-border"><img src="images/Account.png"/>Logout</li>
-            <li class="grey-right-border">
-              <a class="social-media-btn"><img src="images/Facebook_Hover.png"/></a>
-              <a class="social-media-btn"><img src="images/Twitter_Hover.png"/></a>
-              <a class="social-media-btn"><img src="images/Foursquare_Hover.png"/></a>
-              <a class="social-media-btn"><img src="images/Youtube_Hover.png"/></a>
-            </li>
-          </ul>
-        </nav>
-    </footer>
-
-
-
+    <!-- close out content gradient -->
+  <!-- footer -->
+  <footer class="footer container-fluid footer-nav">
+      <nav class="container navbar navbar-light">
+        <ul>
+          <li class="tsb">
+            <a href="#">Tutorials</a>
+            <a class="grey-left-border grey-right-border">Support</a>
+            <a>Blog</a>
+          </li>
+          <li class="ariel-winter grey-left-border">
+            <span>
+              <a href="#">Ariel Winter</a> likes your <a href="#">Win a Cooper Sweepstakes</a> Promotion
+              <button class="btn up-chevron icon-chevron-up"></button>
+            </span>
+          </li>
+          <li class="logout grey-right-border grey-left-border"><img src="images/Account.png"/>Logout</li>
+          <li class="grey-right-border">
+            <a class="social-media-btn"><img src="images/Facebook_Hover.png"/></a>
+            <a class="social-media-btn"><img src="images/Twitter_Hover.png"/></a>
+            <a class="social-media-btn"><img src="images/Foursquare_Hover.png"/></a>
+            <a class="social-media-btn"><img src="images/Youtube_Hover.png"/></a>
+          </li>
+        </ul>
+      </nav>
+  </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

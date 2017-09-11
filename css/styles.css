@@ -297,7 +297,6 @@ footer, #mini-raleigh {
   margin-right: 17px;
   background: transparent;
 }
-
 .task-settings:hover {
   color: #e9e9e9;
 }
@@ -330,14 +329,14 @@ footer, #mini-raleigh {
   color: white;
   border-radius: 15px;
 }
-
-.task-list li:hover {
-  color: #7f7f7f;
-}
-
+/* using the before tag allows the circle around the counter to be manipulated, NOT the whole cell*/
 .task-list li:hover:before {
   border-color: #7f7f7f;
   background: #7f7f7f;
+}
+
+.task-list li:hover {
+  color: #7f7f7f;
 }
 
 .task-list li:hover button {
@@ -439,7 +438,7 @@ footer, #mini-raleigh {
   margin-right: 10px;
 }
 
-.dropdown-menu {
+.dropdown-menu { /*referenced getbootstrap.com*/
   color: #7f7f7f;
   font-size: 13px;
   background-color: #eee;
@@ -672,7 +671,6 @@ footer, #mini-raleigh {
   cursor: pointer;
   box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, .3);
 }
-
 .row-cell:hover {
   cursor: pointer; /* https://www.w3schools.com/cssref/pr_class_cursor.asp */
   filter: grayscale();
@@ -721,7 +719,6 @@ footer, #mini-raleigh {
   color: #2498f4;
   background-color: transparent;
 }
-
 .up-chevron:hover {
   filter: grayscale();
 }
